@@ -36,6 +36,7 @@ public class Main {
 //        sortArray(tbs);
 //        System.out.println(digital_root(991));
 
+        System.out.println("Hello");
 }
 
         public static int digital_root(int n) {
