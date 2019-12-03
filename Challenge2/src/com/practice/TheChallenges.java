@@ -1,14 +1,58 @@
 package com.practice;
 
+import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 public class TheChallenges {
     public static void main(String[] args){
 
-//        Adder myAdd = new Adder();
-//        System.out.println(myAdd.add(69, 1));
+/*
+//Arithmetic and Adder class
+
+        Adder myAdd = new Adder();
+        System.out.println(myAdd.add(69, 1));
+*/
+
+/*
+// MyCalculator class and AdvancedArithmetic Interface
+
         MyCalculator cal = new MyCalculator();
         System.out.println( cal.divisor_sum(25) );
+ */
+
+/*
+//populateList and myFunc methods
+
+        ArrayList theList = new ArrayList();
+
+        Iterator myIt = myFunc(populateList(theList));
+
+        while(myIt.hasNext()){
+            Object element = myIt.next();
+            System.out.println(element);
+        }
+ */
+    }
+    static ArrayList populateList(ArrayList myList){
+        myList.add(21);
+        myList.add(65);
+        myList.add("####");
+        myList.add("Hello");
+        myList.add("World");
+        return myList;
+    }
+    static Iterator myFunc(ArrayList myList){
+        Iterator it=myList.iterator();
+/*        while(it.hasNext()){
+            Object element = it.next();
+            if(element instanceof Integer)
+            {
+                break;
+            }
+        }*/
+        return it;
+
     }
 
 }
