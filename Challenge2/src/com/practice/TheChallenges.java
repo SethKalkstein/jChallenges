@@ -3,6 +3,8 @@ package com.practice;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class TheChallenges {
     public static void main(String[] args){
@@ -33,7 +35,37 @@ public class TheChallenges {
             System.out.println(element);
         }
  */
+/*
+//for abstract class Book and MyBook
+
+        MyBook new_novel = new MyBook();
+        new_novel.setTitle( "A Tail of Two Kitties");
+        System.out.println("The title is: "+new_novel.getTitle());
+ */
+        String myString = "1123.345.5.66";
+        System.out.println(myRegex(myString));
     }
+    static boolean myRegex(String toBeCompared){
+        Pattern checkRegex = Pattern.compile("[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}");
+        Matcher regMatcher = checkRegex.matcher(toBeCompared);
+        return regMatcher.matches();
+    }
+
+    static abstract class Book{
+        String title;
+        abstract void setTitle(String s);
+        String getTitle(){
+            return title;
+        }
+
+    }
+
+    static class MyBook extends Book{
+        void setTitle(String s){
+            this.title = s;
+        }
+    }
+
     static ArrayList populateList(ArrayList myList){
         myList.add(21);
         myList.add(65);
