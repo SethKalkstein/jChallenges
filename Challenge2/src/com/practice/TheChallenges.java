@@ -44,7 +44,20 @@ public class TheChallenges {
  */
         String myString = "1123.345.5.66";
         System.out.println(myRegex(myString));
+        for(int i = 1; i <= 35; i++){
+            System.out.println("i: "+i);
+            weirdo(i);
+        }
     }
+
+    static void weirdo(int n){
+        if((n >= 6 && n <= 20) || (n % 2 == 1)){
+            System.out.println("Weird");
+        } else {
+            System.out.println("Not Weird");
+        }
+    }
+
     static boolean myRegex(String toBeCompared){
         Pattern checkRegex = Pattern.compile("[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}");
         Matcher regMatcher = checkRegex.matcher(toBeCompared);
